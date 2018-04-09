@@ -1,0 +1,45 @@
+<%= form_with(model: patient, local: true) do |form| %>
+  <% if patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :patient_name, class: "form-control", placeholder: "Enter your name" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.text_field :dob, id: :patient_dob, class: "form-control", placeholder: "Enter your Date of Birth" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :patient_address, class: "form-control", placeholder: "Enter your Address" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :patient_phone, class: "form-control", placeholder: "Enter your Phone" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :health %>
+    <%= form.text_field :health, id: :patient_health, class: "form-control", placeholder: "Enter your Health" %>
+  </div>
+
+<br>
+<br>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

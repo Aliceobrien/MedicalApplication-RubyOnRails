@@ -1,0 +1,63 @@
+<div class="jumbotron">
+  <h2>Patient Details</h2>
+  <hr class="my-4">
+  <p class="lead">
+
+<p>
+  <strong>Name:</strong>
+  <%= @patient.name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @patient.dob %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @patient.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @patient.phone %>
+</p>
+
+<p>
+  <strong>Health:</strong>
+  <%= @patient.health %>
+</p>
+
+  </p>
+</div>
+
+<br>
+<br>
+
+<div class="jumbotron">
+  <h2>Visits</h2>
+  <hr class="my-4">
+  <p class="lead">
+
+
+<%= render @patient.visits %> 
+
+  </p>
+</div>
+
+<br>
+<br>
+
+<div class="jumbotron">
+  <h2>Add a Visit:</h2>
+  <hr class="my-4">
+  <p class="lead">
+<%= render 'visits/form' %>
+
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>
+
+  </p>
+</div>
+

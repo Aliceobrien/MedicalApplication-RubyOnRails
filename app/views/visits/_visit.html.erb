@@ -1,0 +1,26 @@
+<p>
+ <strong>Name:</strong>
+ <%= visit.name %>
+ </p>
+
+ <p>
+ <strong>Date:</strong>
+ <%= visit.date %>
+ </p>
+ 
+  <p>
+ <strong>Time:</strong>
+ <%= visit.time %>
+ </p>
+ 
+  <p>
+ <strong>Notes:</strong>
+ <%= visit.notes %>
+ </p>
+<p>
+ <%= link_to 'Destroy Visit', [visit.patient, visit],
+ method: :delete,
+ data: { confirm: 'Are you sure?' } %>
+</p>
+ <br>
+ <br>
