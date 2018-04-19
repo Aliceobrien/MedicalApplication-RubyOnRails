@@ -1,6 +1,19 @@
-<h1>Users</h1>
+<div class="jumbotron">
+  <h1>Users</h1>
+  <hr class="my-4">
+  <p class="lead">
+
 
 <p><%= @user.email %></p>
 
-<p><%= @user.username %></p>
+
 <p><%= @user.birthday %></p>
+
+<h2>Patients of this Doctor</h2>
+
+<% @user.patients.each do |patient| %>
+   <%= link_to patient.name, patient_path(patient) %>
+<% end %>
+
+  </p>
+</div>

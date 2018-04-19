@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project</title>
+    <title>SHC-PMS</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,20 +12,46 @@
 
   <body>
     <div class="container">
+      
+     <!-- <div class = container>
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#" id="First">SHC-PMS</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+       <li>
+     <%= render 'devise/menu/login_items' %>
+       </li>
+      <a class=" py-3 px-0 px-lg-3 rounded js-scroll-trigger" id="FirstHeading">
+        <li>
+          <%= render 'devise/menu/registration_items' %>
+            </li>     
+             <a class=" py-3 px-0 px-lg-3 rounded js-scroll-trigger" id="FirstHeading">
+              <% if user_signed_in? %>
+         <li>
+            <%= link_to 'My Profile', user_path(current_user) %>
+        </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>-->
+
+      
+      
     
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">  SHCPMS</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://projectcc-x14521.c9users.io/">  SHCPMS</a>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         <li class="nav-item">
         <a class="nav-link">
-        <%= render 'devise/menu/login_items' %> 
+        <%= render 'devise/menu/login_items'%> 
       </li>
       </a>
       <li class="nav-item">
@@ -33,12 +59,7 @@
         <%= render 'devise/menu/registration_items' %> 
       </li>
       </a>
-      <li class="nav-item">
-      <a class="nav-link">
-      <%= link_to 'New Patient', new_patient_path %>
-      </li>
-      </a>
-      <li class="nav-item dropdown">
+      <!--<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Sort Patients
         </a>
@@ -53,9 +74,9 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form>-->
   </div>
-</nav>
+</nav> 
     
     
     <%= yield %>

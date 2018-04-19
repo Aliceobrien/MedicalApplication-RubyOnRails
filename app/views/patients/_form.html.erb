@@ -35,11 +35,12 @@
     <%= form.label :health %>
     <%= form.text_field :health, id: :patient_health, class: "form-control", placeholder: "Enter your Health" %>
   </div>
+  
 
 <br>
 <br>
 
   <div class="actions">
-    <%= form.submit %>
+   <%= form.submit 'Create Patient', :class => "btn btn-outline-success my-2 my-sm-0" %>
   </div>
 <% end %>

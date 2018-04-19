@@ -6,7 +6,7 @@
   <hr class="my-4">
   <p class="lead">
 
-    
+   <%= link_to 'New Patient', new_patient_path, class: "btn btn-outline-success my-2 my-sm-0" %> 
    
 <div align="right">
 <%= form_tag(patients_path, :method => "get", id: "search-form") do %>
@@ -50,6 +50,10 @@
   </p>
 </div>
 
+
 <br>
 
-<%= link_to 'New Patient', new_patient_path %>
+
+
+
+

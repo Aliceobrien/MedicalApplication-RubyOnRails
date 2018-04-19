@@ -20,7 +20,7 @@ end
 
   # GET /patients/new
   def new
-    @patient = Patient.new
+    @patient = current_user.patients.build
   end
 
   # GET /patients/1/edit
@@ -30,7 +30,7 @@ end
   # POST /patients
   # POST /patients.json
   def create
-    @patient = Patient.new(patient_params)
+    @patient = current_user.patients.build(patient_params)
 
     respond_to do |format|
       if @patient.save
