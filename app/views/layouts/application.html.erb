@@ -3,60 +3,27 @@
   <head>
     <title>SHC-PMS</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
-    
-  </head>
-
-  <body>
-    <div class="container">
-      
-     <!-- <div class = container>
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    </head>
+    <body>
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#" id="First">SHC-PMS</a>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-       <li>
-     <%= render 'devise/menu/login_items' %>
-       </li>
-      <a class=" py-3 px-0 px-lg-3 rounded js-scroll-trigger" id="FirstHeading">
-        <li>
-          <%= render 'devise/menu/registration_items' %>
-            </li>     
-             <a class=" py-3 px-0 px-lg-3 rounded js-scroll-trigger" id="FirstHeading">
-              <% if user_signed_in? %>
-         <li>
-            <%= link_to 'My Profile', user_path(current_user) %>
-        </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </nav>-->
-
-      
-      
-    
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="https://projectcc-x14521.c9users.io/">  SHCPMS</a>
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">  SHCPMS</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
         <a class="nav-link">
-        <%= render 'devise/menu/login_items'%> 
+        <%= render 'devise/menu/login_items', {:class => "link"} %> 
       </li>
       </a>
       <li class="nav-item">
         <a class="nav-link">
-        <%= render 'devise/menu/registration_items' %> 
+        <%= render 'devise/menu/registration_items',{:class => "link"} %> 
       </li>
       </a>
       <!--<li class="nav-item dropdown">
@@ -81,6 +48,7 @@
     
     <%= yield %>
     
+    
         <!-- Footer -->
     <footer>
       <div class="container text-center">
@@ -99,7 +67,6 @@
     </ul>
     </div>
     </nav> -->
-      <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
        </div>
   </body>

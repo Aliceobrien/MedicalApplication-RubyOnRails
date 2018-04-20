@@ -66,6 +66,13 @@ end
       format.json { head :no_content }
     end
   end
+  
+  def checker
+     @input1 = params[:search_string]
+     @result = Check.runcheck(@input1)
+     flash[:notice] = @result
+     redirect_to request.referrer
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -8,6 +8,8 @@ end
 #Adding devise gem to project for login 
 gem 'devise'
 
+#custom gem 
+gem 'medical_helper', '~> 0.0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'

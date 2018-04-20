@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :visits  
 end
   resources :users 
+  post '/validate', :controller=>'patients', :action=>'checker'
   root 'patients#index'
 end
 
