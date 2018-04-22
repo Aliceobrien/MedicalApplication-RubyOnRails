@@ -33,26 +33,19 @@
 </div>
 
 <div class="jumbotron">
-  <h2>Visits</h2>
+  <h2>Comments</h2>
   <hr class="my-4">
   <p class="lead">
-    
-
-
-<%= render @patient.visits %> 
-
+    <%= render @patient.comments %> 
   </p>
 </div>
 
 
-
-
 <div class="jumbotron">
-  <h2>Add a Visit:</h2>
+  <h2>Add a Comment:</h2>
   <hr class="my-4">
   <p class="lead">
-<%= render 'visits/form' %>
-
+  <%= render 'comments/form' %> 
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
@@ -71,4 +64,3 @@
   <p class="notice"><%= notice %></p>
   </p>
 </div>
-
